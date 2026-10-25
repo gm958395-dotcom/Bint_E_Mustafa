@@ -1,0 +1,1774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BINT-E-MUSTAFA | بنتِ مصطفیٰ — Haute Couture & Luxury Modest Wear</title>
+  <meta name="description" content="BINT-E-MUSTAFA — Exquisite hand-embroidered abayas, pure silk hijabs, and contemporary modest wear crafted with grace, dignity, and timeless artistry." />
+
+  <!-- Google Fonts: Cormorant Garamond (Regal Serif), Amiri (Arabic Elegance), & Plus Jakarta Sans (Clean Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       1. LUXURY COLOR PALETTE & DESIGN SYSTEM
+       ========================================================================== */
+    :root {
+      --emerald-dark: #0D231E;       /* Deep Imperial Emerald */
+      --emerald-accent: #173831;     /* Atelier Forest Green */
+      --gold-primary: #C5A869;       /* Antique Champagne Gold */
+      --gold-light: #E6D5AC;         /* Subtle Gold Shimmer */
+      --gold-glow: rgba(197, 168, 105, 0.18);
+      --cream-ivory: #FAF7F2;        /* Warm Royal Ivory */
+      --cream-linen: #F2ECE1;        /* Textured Sand Linen */
+      --pure-white: #FFFFFF;
+      --charcoal-black: #161A19;
+      --body-text: #37423D;
+      --muted-text: #76827D;
+      --border-soft: #E5DEC9;
+      --border-dark: #223F37;
+
+      /* Typography */
+      --font-serif: 'Cormorant Garamond', Georgia, serif;
+      --font-arabic: 'Amiri', serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+
+      /* Transitions & Shadows */
+      --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
+      --transition: all 0.3s var(--ease);
+      --shadow-royal: 0 16px 40px rgba(13, 35, 30, 0.08);
+      --shadow-card: 0 8px 25px rgba(13, 35, 30, 0.05);
+      --shadow-gold: 0 8px 24px rgba(197, 168, 105, 0.25);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--cream-ivory);
+      color: var(--body-text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+      transition: var(--transition);
+    }
+
+    button {
+      font-family: inherit;
+      border: none;
+      background: none;
+      cursor: pointer;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .container {
+      max-width: 1320px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* ==========================================================================
+       2. TOP ANNOUNCEMENT STRIP
+       ========================================================================== */
+    .top-strip {
+      background-color: var(--emerald-dark);
+      color: var(--gold-light);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 9px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(197, 168, 105, 0.25);
+    }
+
+    .strip-center {
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .strip-highlight {
+      color: var(--gold-primary);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ==========================================================================
+       3. NAVIGATION BAR
+       ========================================================================== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(250, 247, 242, 0.95);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border-soft);
+      transition: var(--transition);
+    }
+
+    .header.scrolled {
+      background: rgba(250, 247, 242, 0.98);
+      box-shadow: 0 6px 20px rgba(13, 35, 30, 0.05);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 84px;
+    }
+
+    /* Brand Logo */
+    .brand-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2px;
+    }
+
+    .brand-arabic {
+      font-family: var(--font-arabic);
+      font-size: 20px;
+      color: var(--gold-primary);
+      line-height: 1;
+      letter-spacing: 0.02em;
+    }
+
+    .brand-title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      color: var(--emerald-dark);
+      text-transform: uppercase;
+    }
+
+    .brand-tagline {
+      font-size: 9px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted-text);
+      font-weight: 600;
+    }
+
+    /* Nav Links */
+    .nav-menu {
+      display: flex;
+      align-items: center;
+      gap: 32px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--emerald-dark);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 1.5px;
+      background-color: var(--gold-primary);
+      transition: width 0.3s ease;
+    }
+
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .action-icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--emerald-dark);
+      border: 1px solid transparent;
+      position: relative;
+    }
+
+    .action-icon-btn:hover {
+      background: var(--cream-linen);
+      border-color: var(--border-soft);
+      color: var(--gold-primary);
+    }
+
+    .counter-badge {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+      background: var(--gold-primary);
+      color: var(--emerald-dark);
+      font-size: 9px;
+      font-weight: 800;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* ==========================================================================
+       4. HERO CAMPAIGN (ATELIER PRESTIGE)
+       ========================================================================== */
+    .hero-section {
+      padding: 24px 0 60px;
+    }
+
+    .hero-box {
+      background: linear-gradient(135deg, #091A16 0%, #112D26 60%, #163B32 100%);
+      border-radius: 24px;
+      min-height: 580px;
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+      box-shadow: var(--shadow-royal);
+    }
+
+    /* Subtle Arabesque Arch Pattern Layer */
+    .hero-box::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: radial-gradient(#C5A869 0.75px, transparent 0.75px);
+      background-size: 24px 24px;
+      opacity: 0.08;
+      pointer-events: none;
+    }
+
+    .hero-text-content {
+      padding: 70px 54px 70px 64px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      color: var(--cream-ivory);
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-arabic-calligraphy {
+      font-family: var(--font-arabic);
+      font-size: 28px;
+      color: var(--gold-primary);
+      margin-bottom: 12px;
+      letter-spacing: 0.05em;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      background: rgba(197, 168, 105, 0.15);
+      border: 1px solid rgba(197, 168, 105, 0.35);
+      padding: 6px 14px;
+      border-radius: 50px;
+      margin-bottom: 24px;
+      width: fit-content;
+    }
+
+    .hero-heading {
+      font-family: var(--font-serif);
+      font-size: 58px;
+      font-weight: 600;
+      line-height: 1.08;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+      color: var(--pure-white);
+    }
+
+    .hero-heading em {
+      font-style: italic;
+      color: var(--gold-light);
+      font-weight: 400;
+    }
+
+    .hero-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #CAD5CF;
+      max-width: 480px;
+      margin-bottom: 36px;
+    }
+
+    .btn-group {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .btn-gold {
+      background: linear-gradient(135deg, #C5A869 0%, #DFCA8C 100%);
+      color: var(--emerald-dark);
+      padding: 15px 32px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      box-shadow: var(--shadow-gold);
+    }
+
+    .btn-gold:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(197, 168, 105, 0.35);
+    }
+
+    .btn-outline-gold {
+      border: 1px solid var(--gold-primary);
+      color: var(--gold-light);
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .btn-outline-gold:hover {
+      background: rgba(197, 168, 105, 0.12);
+      color: var(--pure-white);
+    }
+
+    .hero-visual-side {
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero-model-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      filter: contrast(1.02);
+    }
+
+    .hero-seal {
+      position: absolute;
+      bottom: 30px;
+      left: 30px;
+      background: rgba(13, 35, 30, 0.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid var(--gold-primary);
+      padding: 12px 20px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .seal-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--gold-primary);
+      box-shadow: 0 0 8px var(--gold-primary);
+    }
+
+    /* ==========================================================================
+       5. BRAND PHILOSOPHY / THE THREE PILLARS
+       ========================================================================== */
+    .philosophy-strip {
+      padding: 60px 0;
+      border-bottom: 1px solid var(--border-soft);
+      background: var(--cream-ivory);
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+    }
+
+    .pillar-item {
+      padding: 0 20px;
+      position: relative;
+    }
+
+    .pillar-item:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      right: -20px;
+      top: 20%;
+      height: 60%;
+      width: 1px;
+      background: var(--border-soft);
+    }
+
+    .pillar-arabic {
+      font-family: var(--font-arabic);
+      font-size: 26px;
+      color: var(--gold-primary);
+      margin-bottom: 8px;
+    }
+
+    .pillar-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--emerald-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 8px;
+    }
+
+    .pillar-desc {
+      font-size: 13.5px;
+      color: var(--muted-text);
+      line-height: 1.6;
+    }
+
+    /* ==========================================================================
+       6. CURATED COLLECTIONS (ARCH BANNERS)
+       ========================================================================== */
+    .section-spacing {
+      padding: 80px 0;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-kicker {
+      font-family: var(--font-arabic);
+      font-size: 22px;
+      color: var(--gold-primary);
+      display: block;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: 38px;
+      font-weight: 700;
+      color: var(--emerald-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 10px;
+    }
+
+    .section-subtitle {
+      font-size: 15px;
+      color: var(--muted-text);
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .collections-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+
+    .collection-arch-card {
+      position: relative;
+      height: 440px;
+      border-radius: 120px 120px 16px 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 28px 20px;
+      color: var(--pure-white);
+      transition: var(--transition);
+      background-color: var(--emerald-dark);
+    }
+
+    .collection-arch-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-royal);
+      border-color: var(--gold-primary);
+    }
+
+    .collection-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.8s var(--ease);
+      z-index: 1;
+    }
+
+    .collection-arch-card:hover .collection-bg-img {
+      transform: scale(1.06);
+    }
+
+    .collection-gradient-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, rgba(13, 35, 30, 0.1) 20%, rgba(13, 35, 30, 0.85) 85%);
+      z-index: 2;
+    }
+
+    .collection-content {
+      position: relative;
+      z-index: 3;
+      text-align: center;
+    }
+
+    .collection-sub {
+      font-size: 11px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 4px;
+      font-weight: 600;
+    }
+
+    .collection-name {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      font-weight: 700;
+      margin-bottom: 12px;
+      color: var(--pure-white);
+    }
+
+    .collection-cta {
+      display: inline-block;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+      border-bottom: 1px solid var(--gold-primary);
+      padding-bottom: 2px;
+    }
+
+    /* ==========================================================================
+       7. PRODUCT CATALOG & SHOPPING FILTERS
+       ========================================================================== */
+    .catalog-section {
+      background: var(--cream-linen);
+      padding: 90px 0;
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .filter-tab-bar {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .filter-btn {
+      padding: 10px 24px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--emerald-dark);
+      background: var(--pure-white);
+      border: 1px solid var(--border-soft);
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover,
+    .filter-btn.active {
+      background: var(--emerald-dark);
+      color: var(--gold-light);
+      border-color: var(--emerald-dark);
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px 24px;
+    }
+
+    .product-card {
+      background: var(--pure-white);
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-soft);
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .product-card:hover {
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-card);
+      border-color: var(--gold-primary);
+    }
+
+    .product-media {
+      position: relative;
+      aspect-ratio: 3 / 4;
+      overflow: hidden;
+      background-color: var(--cream-ivory);
+    }
+
+    .product-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease);
+    }
+
+    .product-card:hover .product-img {
+      transform: scale(1.05);
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: var(--emerald-dark);
+      color: var(--gold-light);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: 50px;
+      border: 1px solid rgba(197, 168, 105, 0.4);
+      z-index: 2;
+    }
+
+    .wishlist-toggle {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--emerald-dark);
+      z-index: 2;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+    }
+
+    .wishlist-toggle.active {
+      color: #D94B52;
+    }
+
+    .quick-view-bar {
+      position: absolute;
+      bottom: 12px;
+      left: 12px;
+      right: 12px;
+      display: flex;
+      gap: 8px;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: var(--transition);
+      z-index: 3;
+    }
+
+    .product-card:hover .quick-view-bar {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .btn-quick, .btn-add-card {
+      flex: 1;
+      padding: 10px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-radius: 50px;
+      text-align: center;
+    }
+
+    .btn-quick {
+      background: rgba(255, 255, 255, 0.96);
+      color: var(--emerald-dark);
+    }
+
+    .btn-quick:hover {
+      background: var(--emerald-dark);
+      color: var(--gold-light);
+    }
+
+    .btn-add-card {
+      background: var(--gold-primary);
+      color: var(--emerald-dark);
+    }
+
+    .btn-add-card:hover {
+      background: #b59858;
+    }
+
+    .product-info {
+      padding: 18px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .product-cat {
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--gold-primary);
+    }
+
+    .product-title {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--emerald-dark);
+      line-height: 1.3;
+      cursor: pointer;
+    }
+
+    .product-title:hover {
+      color: var(--gold-primary);
+    }
+
+    .product-price-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 4px;
+    }
+
+    .price-current {
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--emerald-dark);
+    }
+
+    .price-old {
+      font-size: 13px;
+      color: var(--muted-text);
+      text-decoration: line-through;
+    }
+
+    /* ==========================================================================
+       8. ATELIER BESPOKE CONSULTATION (WHATSAPP INTEGRATION)
+       ========================================================================== */
+    .bespoke-section {
+      padding: 80px 0;
+      background: var(--emerald-dark);
+      color: var(--cream-ivory);
+      position: relative;
+    }
+
+    .bespoke-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: center;
+    }
+
+    .bespoke-content {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    .bespoke-arabic {
+      font-family: var(--font-arabic);
+      font-size: 32px;
+      color: var(--gold-primary);
+    }
+
+    .bespoke-title {
+      font-family: var(--font-serif);
+      font-size: 42px;
+      font-weight: 700;
+      line-height: 1.15;
+      color: var(--pure-white);
+    }
+
+    .bespoke-desc {
+      font-size: 15px;
+      line-height: 1.7;
+      color: #CAD5CF;
+    }
+
+    .bespoke-perks {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 10px 0 20px;
+    }
+
+    .perk-item {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 13.5px;
+      color: var(--gold-light);
+    }
+
+    .perk-icon {
+      color: var(--gold-primary);
+      font-size: 16px;
+    }
+
+    .whatsapp-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      background: #25D366;
+      color: #FFFFFF;
+      padding: 14px 28px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.3);
+      width: fit-content;
+    }
+
+    .whatsapp-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 12px 28px rgba(37, 211, 102, 0.45);
+    }
+
+    .bespoke-gallery {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .bespoke-thumb {
+      height: 240px;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid var(--border-dark);
+    }
+
+    .bespoke-thumb img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    /* ==========================================================================
+       9. CLIENT TESTIMONIALS (WORDS OF GRACE)
+       ========================================================================== */
+    .reviews-section {
+      padding: 90px 0;
+      background: var(--cream-ivory);
+    }
+
+    .reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+    }
+
+    .review-card {
+      background: var(--pure-white);
+      border: 1px solid var(--border-soft);
+      border-radius: 16px;
+      padding: 36px 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-card);
+    }
+
+    .review-quote {
+      font-family: var(--font-serif);
+      font-size: 18px;
+      font-style: italic;
+      color: var(--body-text);
+      line-height: 1.6;
+      margin-bottom: 24px;
+    }
+
+    .review-author {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+
+    .author-avatar {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--cream-linen);
+      color: var(--emerald-dark);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      border: 1px solid var(--gold-primary);
+    }
+
+    .author-name {
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--emerald-dark);
+    }
+
+    .author-city {
+      font-size: 11px;
+      color: var(--muted-text);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    /* ==========================================================================
+       10. NEWSLETTER & ATELIER CIRCLE
+       ========================================================================== */
+    .atelier-circle {
+      background: var(--cream-linen);
+      padding: 70px 0;
+      border-top: 1px solid var(--border-soft);
+      text-align: center;
+    }
+
+    .circle-form-wrap {
+      max-width: 580px;
+      margin: 0 auto;
+    }
+
+    .circle-form {
+      display: flex;
+      align-items: center;
+      background: var(--pure-white);
+      border: 1px solid var(--border-soft);
+      border-radius: 50px;
+      padding: 6px 6px 6px 24px;
+      margin-top: 24px;
+      box-shadow: var(--shadow-card);
+    }
+
+    .circle-input {
+      flex: 1;
+      border: none;
+      outline: none;
+      font-size: 14px;
+      font-family: inherit;
+      color: var(--emerald-dark);
+      background: transparent;
+    }
+
+    .circle-submit {
+      background: var(--emerald-dark);
+      color: var(--gold-light);
+      padding: 12px 28px;
+      border-radius: 50px;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .circle-submit:hover {
+      background: var(--gold-primary);
+      color: var(--emerald-dark);
+    }
+
+    /* ==========================================================================
+       11. FOOTER
+       ========================================================================== */
+    .footer {
+      background-color: #071411;
+      color: #A9B7B2;
+      padding: 80px 0 30px;
+      border-top: 1px solid rgba(197, 168, 105, 0.2);
+    }
+
+    .footer-top {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1.2fr;
+      gap: 40px;
+      margin-bottom: 60px;
+    }
+
+    .footer-brand-title {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      color: var(--pure-white);
+      letter-spacing: 0.12em;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+    }
+
+    .footer-arabic {
+      font-family: var(--font-arabic);
+      font-size: 22px;
+      color: var(--gold-primary);
+      margin-bottom: 14px;
+    }
+
+    .footer-bio {
+      font-size: 13.5px;
+      line-height: 1.7;
+      max-width: 320px;
+    }
+
+    .footer-head {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--pure-white);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      font-size: 13px;
+      color: #92A39E;
+    }
+
+    .footer-links a:hover {
+      color: var(--gold-light);
+      padding-left: 4px;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+      padding-top: 28px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 12px;
+      color: #6C7A76;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* ==========================================================================
+       12. CART & WISHLIST DRAWERS & MODALS
+       ========================================================================== */
+    .drawer-backdrop {
+      position: fixed;
+      inset: 0;
+      background: rgba(13, 35, 30, 0.65);
+      backdrop-filter: blur(6px);
+      z-index: 998;
+      opacity: 0;
+      visibility: hidden;
+      transition: var(--transition);
+    }
+
+    .drawer-backdrop.active {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .slide-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      width: 440px;
+      max-width: 90vw;
+      height: 100vh;
+      background: var(--pure-white);
+      z-index: 999;
+      box-shadow: -10px 0 35px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      transform: translateX(100%);
+      transition: transform 0.4s var(--ease);
+    }
+
+    .slide-drawer.open {
+      transform: translateX(0);
+    }
+
+    .drawer-header {
+      padding: 24px;
+      border-bottom: 1px solid var(--border-soft);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--cream-ivory);
+    }
+
+    .drawer-title {
+      font-family: var(--font-serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--emerald-dark);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .drawer-close {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--cream-linen);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      color: var(--emerald-dark);
+    }
+
+    .drawer-close:hover {
+      background: var(--gold-primary);
+      color: var(--pure-white);
+    }
+
+    .drawer-items {
+      flex: 1;
+      overflow-y: auto;
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    .cart-item-row {
+      display: grid;
+      grid-template-columns: 75px 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .cart-item-img {
+      width: 75px;
+      height: 95px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .cart-item-details h4 {
+      font-family: var(--font-serif);
+      font-size: 16px;
+      color: var(--emerald-dark);
+      margin-bottom: 4px;
+    }
+
+    .cart-item-size {
+      font-size: 11px;
+      color: var(--muted-text);
+      text-transform: uppercase;
+    }
+
+    .cart-item-price {
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--gold-primary);
+      margin-top: 4px;
+    }
+
+    .drawer-footer {
+      padding: 24px;
+      border-top: 1px solid var(--border-soft);
+      background: var(--cream-ivory);
+    }
+
+    .drawer-subtotal {
+      display: flex;
+      justify-content: space-between;
+      font-size: 16px;
+      font-weight: 700;
+      margin-bottom: 16px;
+      color: var(--emerald-dark);
+    }
+
+    .btn-checkout {
+      width: 100%;
+      background: var(--emerald-dark);
+      color: var(--gold-light);
+      padding: 14px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-align: center;
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .btn-checkout:hover {
+      background: var(--gold-primary);
+      color: var(--emerald-dark);
+    }
+
+    /* Quick View Modal */
+    .quick-modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.95);
+      width: 840px;
+      max-width: 92vw;
+      background: var(--pure-white);
+      border-radius: 20px;
+      z-index: 1000;
+      box-shadow: 0 25px 60px rgba(13, 35, 30, 0.3);
+      opacity: 0;
+      visibility: hidden;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .quick-modal.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .modal-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .modal-image-box {
+      background: var(--cream-linen);
+      height: 480px;
+    }
+
+    .modal-image-box img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .modal-info-box {
+      padding: 40px 32px;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--cream-ivory);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 16px;
+    }
+
+    .size-selector {
+      margin: 18px 0;
+    }
+
+    .size-btn-group {
+      display: flex;
+      gap: 8px;
+      margin-top: 8px;
+    }
+
+    .size-pill {
+      width: 42px;
+      height: 36px;
+      border: 1px solid var(--border-soft);
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .size-pill.active,
+    .size-pill:hover {
+      border-color: var(--emerald-dark);
+      background: var(--emerald-dark);
+      color: var(--gold-light);
+    }
+
+    /* Toast Alert */
+    .toast-pill {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: var(--emerald-dark);
+      color: var(--gold-light);
+      border: 1px solid var(--gold-primary);
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 13px;
+      font-weight: 600;
+      z-index: 1100;
+      transform: translateY(30px);
+      opacity: 0;
+      transition: var(--transition);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+    }
+
+    .toast-pill.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* ==========================================================================
+       13. RESPONSIVE QUERIES
+       ========================================================================== */
+    @media (max-width: 1100px) {
+      .hero-heading { font-size: 46px; }
+      .collections-grid { grid-template-columns: repeat(2, 1fr); }
+      .product-grid { grid-template-columns: repeat(3, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 860px) {
+      .nav-menu { display: none; }
+      .hero-box { grid-template-columns: 1fr; min-height: auto; }
+      .hero-text-content { padding: 50px 28px; }
+      .hero-visual-side { height: 420px; }
+      .pillars-grid { grid-template-columns: 1fr; gap: 24px; }
+      .pillar-item:not(:last-child)::after { display: none; }
+      .bespoke-grid { grid-template-columns: 1fr; }
+      .reviews-grid { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .modal-grid { grid-template-columns: 1fr; }
+      .modal-image-box { height: 280px; }
+    }
+
+    @media (max-width: 520px) {
+      .hero-heading { font-size: 34px; }
+      .collections-grid { grid-template-columns: 1fr; }
+      .product-grid { grid-template-columns: 1fr; }
+      .footer-top { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ==========================================================================
+       TOP ANNOUNCEMENT BAR
+       ========================================================================== -->
+  <div class="top-strip">
+    <div class="strip-center">
+      <span>✨ THE ROYAL EID & RAMADAN COUTURE COLLECTION IS LIVE</span>
+      <span style="color: var(--gold-primary);">|</span>
+      <span>Complimentary Worldwide Shipping on Orders Over PKR 25,000 / $120</span>
+      <a href="#shop" class="strip-highlight">Discover The Drop &rarr;</a>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+  <header class="header" id="mainHeader">
+    <div class="container header-inner">
+      <!-- Wordmark Logo with Arabic Nuance -->
+      <a href="#" class="brand-block" aria-label="BINT-E-MUSTAFA Homepage">
+        <span class="brand-arabic">بنتِ مصطفیٰ</span>
+        <span class="brand-title">BINT-E-MUSTAFA</span>
+        <span class="brand-tagline">Haute Couture &bull; Modest Atelier</span>
+      </a>
+
+      <!-- Navigation -->
+      <nav>
+        <ul class="nav-menu">
+          <li><a href="#" class="nav-link active">Atelier Home</a></li>
+          <li><a href="#shop" class="nav-link" onclick="filterCatalog('Abayas')">Luxury Abayas</a></li>
+          <li><a href="#shop" class="nav-link" onclick="filterCatalog('Pret')">Festive Pret</a></li>
+          <li><a href="#shop" class="nav-link" onclick="filterCatalog('Hijabs')">Pure Silk Hijabs</a></li>
+          <li><a href="#bespoke" class="nav-link">Bespoke Bridal</a></li>
+          <li><a href="#heritage" class="nav-link">Our Heritage</a></li>
+        </ul>
+      </nav>
+
+      <!-- Action Items -->
+      <div class="nav-actions">
+        <!-- Wishlist -->
+        <button class="action-icon-btn" onclick="openWishlistDrawer()" aria-label="View Wishlist">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+          </svg>
+          <span class="counter-badge" id="wishlistCount">0</span>
+        </button>
+
+        <!-- Bag Trigger -->
+        <button class="action-icon-btn" onclick="openCartDrawer()" aria-label="View Bag">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/>
+          </svg>
+          <span class="counter-badge" id="cartCount">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ==========================================================================
+         HERO SECTION (ROYAL MODEST CAMPAIGN)
+         ========================================================================== -->
+    <section class="hero-section">
+      <div class="container">
+        <div class="hero-box">
+          <div class="hero-text-content">
+            <div class="hero-arabic-calligraphy">الحیاء والجمال</div>
+            <div class="hero-badge">
+              <span>✦</span> The Royal Autumn &amp; Festive Edit 2026
+            </div>
+            <h1 class="hero-heading">
+              Modesty Woven with <em>Regal Grace.</em>
+            </h1>
+            <p class="hero-desc">
+              BINT-E-MUSTAFA celebrates the sacred art of modest dressing. Each piece is crafted with hand-spun pure silk, Korean Nida, and resham threadwork tailored for the contemporary woman.
+            </p>
+
+            <div class="btn-group">
+              <a href="#shop" class="btn-gold" onclick="filterCatalog('All')">Explore The Collection &rarr;</a>
+              <a href="#bespoke" class="btn-outline-gold">Bespoke Fitting</a>
+            </div>
+          </div>
+
+          <div class="hero-visual-side">
+            <img 
+              class="hero-model-image" 
+              src="https://images.unsplash.com/photo-1583391733956-3750e0ff4e8b?auto=format&fit=crop&w=1000&q=80" 
+              alt="BINT-E-MUSTAFA Modest Couture Luxury Abaya"
+            />
+            <div class="hero-seal">
+              <span class="seal-dot"></span>
+              <span>100% Pure Korean Nida &bull; Artisanal Zardozi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       BRAND PHILOSOPHY / THE THREE PILLARS
+       ========================================================================== -->
+    <section class="philosophy-strip" id="heritage">
+      <div class="container">
+        <div class="pillars-grid">
+          <div class="pillar-item">
+            <div class="pillar-arabic">عفّت ووقار</div>
+            <h3 class="pillar-title">Dignified Silhouettes</h3>
+            <p class="pillar-desc">Designed with generous volume, fluid floor-length draping, and graceful cuts that honor privacy without sacrificing haute sophistication.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-arabic">صناعۃ فاخرۃ</div>
+            <h3 class="pillar-title">Artisanal Craft</h3>
+            <p class="pillar-desc">Every bead, pearl embellishment, and tilla zardozi stitch is delicately embroidered by master artisans across our Karachi and Lahore ateliers.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-arabic">أقمشۃ نقیّۃ</div>
+            <h3 class="pillar-title">Pure Noble Fabrics</h3>
+            <p class="pillar-desc">Sourced directly from Kyoto and Seoul mills: non-static Korean Nida, featherweight Mulberry silk, and crushed velvet with breathable drape.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       CURATED CAPSULES (ARCH BANNERS)
+       ========================================================================== -->
+    <section class="section-spacing">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">مجموعات راقية</span>
+          <h2 class="section-title">Curated Atelier Capsules</h2>
+          <p class="section-subtitle">Discover handcrafted collections curated for formal occasions, holy pilgrimages, and daily luxury.</p>
+        </div>
+
+        <div class="collections-grid">
+          <!-- Capsule 1 -->
+          <a href="#shop" class="collection-arch-card" onclick="filterCatalog('Abayas')">
+            <img class="collection-bg-img" src="https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&w=700&q=80" alt="Imperial Abayas" />
+            <div class="collection-gradient-overlay"></div>
+            <div class="collection-content">
+              <span class="collection-sub">Heritage Signature</span>
+              <h3 class="collection-name">Imperial Abayas</h3>
+              <span class="collection-cta">Discover Edit &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Capsule 2 -->
+          <a href="#shop" class="collection-arch-card" onclick="filterCatalog('Pret')">
+            <img class="collection-bg-img" src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?auto=format&fit=crop&w=700&q=80" alt="Festive Pret" />
+            <div class="collection-gradient-overlay"></div>
+            <div class="collection-content">
+              <span class="collection-sub">Occasion &amp; Eid</span>
+              <h3 class="collection-name">Festive Modest Pret</h3>
+              <span class="collection-cta">Discover Edit &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Capsule 3 -->
+          <a href="#shop" class="collection-arch-card" onclick="filterCatalog('Hijabs')">
+            <img class="collection-bg-img" src="https://images.unsplash.com/photo-1596755094514-f87e34085b2c?auto=format&fit=crop&w=700&q=80" alt="Pure Silk Hijabs" />
+            <div class="collection-gradient-overlay"></div>
+            <div class="collection-content">
+              <span class="collection-sub">Lustrous Drapes</span>
+              <h3 class="collection-name">Mulberry Silk Hijabs</h3>
+              <span class="collection-cta">Discover Edit &rarr;</span>
+            </div>
+          </a>
+
+          <!-- Capsule 4 -->
+          <a href="#bespoke" class="collection-arch-card">
+            <img class="collection-bg-img" src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=700&q=80" alt="Bridal Modest Wear" />
+            <div class="collection-gradient-overlay"></div>
+            <div class="collection-content">
+              <span class="collection-sub">Couture Atelier</span>
+              <h3 class="collection-name">Bridal &amp; Trousseau</h3>
+              <span class="collection-cta">Book Fitting &rarr;</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       CATALOG SECTION & REAL-TIME FILTERS
+       ========================================================================== -->
+    <section class="catalog-section" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">تسوّقي الآن</span>
+          <h2 class="section-title">The Royal Collection</h2>
+          <p class="section-subtitle">Select any garment to view details, choose custom lengths (50" to 60"), or reserve via WhatsApp.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="filter-tab-bar">
+          <button class="filter-btn active" onclick="filterCatalog('All')">All Ensembles</button>
+          <button class="filter-btn" onclick="filterCatalog('Abayas')">Luxury Abayas</button>
+          <button class="filter-btn" onclick="filterCatalog('Pret')">Modest Pret</button>
+          <button class="filter-btn" onclick="filterCatalog('Hijabs')">Hijabs &amp; Stoles</button>
+          <button class="filter-btn" onclick="filterCatalog('Bridal')">Nikah &amp; Bridal</button>
+        </div>
+
+        <!-- Grid Container -->
+        <div class="product-grid" id="productGrid">
+          <!-- Populated by JavaScript -->
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       BESPOKE BRIDAL & WHATSAPP CONCIERGE
+       ========================================================================== -->
+    <section class="bespoke-section" id="bespoke">
+      <div class="container">
+        <div class="bespoke-grid">
+          <div class="bespoke-content">
+            <div class="bespoke-arabic">خياطة حسب الطلب</div>
+            <h2 class="bespoke-title">Bespoke Nikah &amp; Custom Sizing Atelier</h2>
+            <p class="bespoke-desc">
+              Every woman deserves a silhouette tailored specifically to her height, sleeve length, and personal aesthetic. Connect directly with our Senior Stylist and Master Tailor on WhatsApp to book a private consultation, request fabric swatches, or order custom lengths.
+            </p>
+
+            <div class="bespoke-perks">
+              <div class="perk-item"><span class="perk-icon">✦</span> Custom length (50" – 62")</div>
+              <div class="perk-item"><span class="perk-icon">✦</span> Pure Japanese Silk Organza</div>
+              <div class="perk-item"><span class="perk-icon">✦</span> Hand zardozi monogramming</div>
+              <div class="perk-item"><span class="perk-icon">✦</span> Worldwide insured dispatch</div>
+            </div>
+
+            <!-- Working WhatsApp CTA pre-populated -->
+            <a 
+              href="https://wa.me/923000000000?text=Salam%20Bint-e-Mustafa%20Atelier,%20I%20would%20like%20to%20inquire%20about%20a%20Bespoke%20Nikah/Abaya%20Consultation." 
+              target="_blank" 
+              class="whatsapp-btn"
+            >
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12.031 2C6.511 2 2.025 6.486 2.025 12.008c0 1.956.564 3.78 1.542 5.323L2 22l4.821-1.536A9.97 9.97 0 0 0 12.031 22C17.55 22 22 17.514 22 12.008 22 6.486 17.55 2 12.031 2zm5.799 14.288c-.244.685-1.42 1.309-1.969 1.353-.518.042-1.189.06-3.834-1.033-2.646-1.094-4.341-3.791-4.473-3.967-.132-.176-1.071-1.426-1.071-2.72 0-1.294.68-1.93.921-2.193.242-.264.528-.33.704-.33.176 0 .352.002.506.01.165.008.385-.062.602.459.22.529.748 1.828.814 1.961.066.132.11.286.022.462-.088.176-.132.286-.264.44-.132.154-.277.344-.396.462-.132.132-.27.276-.116.54.154.264.683 1.124 1.465 1.821 1.004.894 1.85 1.171 2.114 1.303.264.132.418.11.572-.066.154-.176.66-.77.836-1.034.176-.264.352-.22.594-.132.242.088 1.54.726 1.804.858.264.132.44.198.506.308.066.11.066.638-.178 1.323z"/>
+              </svg>
+              <span>Connect on WhatsApp Atelier</span>
+            </a>
+          </div>
+
+          <div class="bespoke-gallery">
+            <div class="bespoke-thumb">
+              <img src="https://images.unsplash.com/photo-1544441893-675973e31985?auto=format&fit=crop&w=600&q=80" alt="Hand zardozi embroidery closeup" />
+            </div>
+            <div class="bespoke-thumb" style="margin-top: 24px;">
+              <img src="https://images.unsplash.com/photo-1509631179647-0177331693ae?auto=format&fit=crop&w=600&q=80" alt="Silk draping craftsmanship" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       CLIENT TESTIMONIALS (WORDS OF SATISFACTION)
+       ========================================================================== -->
+    <section class="reviews-section">
+      <div class="container">
+        <div class="section-header">
+          <span class="section-kicker">شهادات العملاء</span>
+          <h2 class="section-title">Words of Grace</h2>
+          <p class="section-subtitle">Real experiences shared by clients across Lahore, Dubai, London, and Jeddah.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card">
+            <p class="review-quote">"The Noor-e-Jahan Abaya has the most breathtaking fall I have ever worn. The Korean Nida stays completely wrinkle-free even during long flights to Dubai."</p>
+            <div class="review-author">
+              <div class="author-avatar">SZ</div>
+              <div>
+                <h4 class="author-name">Dr. Sarah Zubair</h4>
+                <span class="author-city">Karachi &bull; Clifton</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <p class="review-quote">"Ordered my Nikah ensemble bespoke through their WhatsApp stylist. The pearl hand-embroidery and precision 56-inch length were flawless."</p>
+            <div class="review-author">
+              <div class="author-avatar">AF</div>
+              <div>
+                <h4 class="author-name">Amina Al-Falasi</h4>
+                <span class="author-city">Dubai &bull; Downtown</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <p class="review-quote">"Finally, an atelier that respects true modesty with high couture dignity. The Mulberry silk hijabs stay secure all day without slipping."</p>
+            <div class="review-author">
+              <div class="author-avatar">MK</div>
+              <div>
+                <h4 class="author-name">Maryam Khan</h4>
+                <span class="author-city">London &bull; Knightsbridge</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+       ATELIER CIRCLE (NEWSLETTER)
+       ========================================================================== -->
+    <section class="atelier-circle">
+      <div class="container">
+        <div class="circle-form-wrap">
+          <span class="section-kicker">انضمّي إلى دائرتنا</span>
+          <h2 class="section-title" style="font-size: 30px;">The Atelier Circle</h2>
+          <p class="section-subtitle">Receive private invitations to seasonal capsule drops, Ramadan trunk shows, and bespoke fabric arrivals.</p>
+
+          <form class="circle-form" onsubmit="handleSubscribe(event)">
+            <input type="email" class="circle-input" id="subscriberEmail" placeholder="Enter your email address..." required />
+            <button type="submit" class="circle-submit">Join Circle</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER
+       ========================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div>
+          <div class="footer-arabic">بنتِ مصطفیٰ</div>
+          <h3 class="footer-brand-title">BINT-E-MUSTAFA</h3>
+          <p class="footer-bio">
+            Haute Couture modest fashion house dedicated to timeless elegance, authentic modesty, and artisanal craftsmanship. Designed for the modern discerning Muslimah.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-head">Collections</h4>
+          <ul class="footer-links">
+            <li><a href="#shop" onclick="filterCatalog('Abayas')">Imperial Abayas</a></li>
+            <li><a href="#shop" onclick="filterCatalog('Pret')">Eid &amp; Festive Pret</a></li>
+            <li><a href="#shop" onclick="filterCatalog('Hijabs')">Mulberry Silk Stoles</a></li>
+            <li><a href="#bespoke">Bespoke Nikah Gowns</a></li>
+            <li><a href="#shop" onclick="filterCatalog('All')">Travel &amp; Umrah Capsule</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-head">Atelier Care</h4>
+          <ul class="footer-links">
+            <li><a href="#bespoke">Custom Size Guide (50" - 60")</a></li>
+            <li><a href="#bespoke">Fabric Care Instructions</a></li>
+            <li><a href="#bespoke">Worldwide Express Shipping</a></li>
+            <li><a href="#bespoke">Atelier Exchange Policy</a></li>
+            <li><a href="#bespoke">Track Order Status</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-head">Flagship Suites</h4>
+          <p style="font-size: 13px; color: #92A39E; line-height: 1.6; margin-bottom: 12px;">
+            <strong>Karachi Atelier:</strong> Suite 4B, Bukhari Commercial, Phase 6 DHA.<br />
+            <strong>Lahore Suite:</strong> M.M. Alam Road, Gulberg III.<br />
+            <strong>International Dispatch:</strong> Dubai &bull; London &bull; North America.
+          </p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
