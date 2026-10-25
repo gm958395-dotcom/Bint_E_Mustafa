@@ -1,0 +1,404 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Contact BM Collection by Binte Mustafa for fashion enquiries and customer support.">
+  <title>Contact Us | BINTE MUSTAFA</title>
+
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --gold: #c9a45c;
+      --cream: #f7f3eb;
+      --muted: #aaa49a;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      background: var(--gold);
+      color: var(--black);
+      text-align: center;
+      padding: 10px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 7%;
+      border-bottom: 1px solid #29251d;
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 27px;
+      letter-spacing: 3px;
+    }
+
+    .logo small {
+      display: block;
+      color: var(--cream);
+      font: 9px Arial, sans-serif;
+      letter-spacing: 4px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      text-align: center;
+      padding: 75px 7% 60px;
+      background: linear-gradient(180deg, #1b1710, var(--black));
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font: 11px Arial, sans-serif;
+      letter-spacing: 4px;
+      margin-bottom: 18px;
+    }
+
+    h1 {
+      font-size: clamp(40px, 6vw, 62px);
+      font-weight: normal;
+      margin-bottom: 18px;
+    }
+
+    h1 span, h2 span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .hero p {
+      color: var(--muted);
+      font: 14px/1.8 Arial, sans-serif;
+    }
+
+    .contact-section {
+      padding: 45px 7% 85px;
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.8fr 1.2fr;
+      gap: 55px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 34px;
+      font-weight: normal;
+      line-height: 1.3;
+      margin-bottom: 20px;
+    }
+
+    .intro {
+      color: var(--muted);
+      font: 13px/1.9 Arial, sans-serif;
+      margin-bottom: 30px;
+    }
+
+    .contact-item {
+      padding: 18px 0;
+      border-bottom: 1px solid #302a20;
+    }
+
+    .contact-item h3 {
+      color: var(--gold);
+      font-size: 18px;
+      font-weight: normal;
+      margin-bottom: 5px;
+    }
+
+    .contact-item p {
+      color: var(--muted);
+      font: 12px/1.8 Arial, sans-serif;
+      overflow-wrap: anywhere;
+    }
+
+    .contact-form {
+      background: #12110e;
+      border: 1px solid #302a20;
+      padding: 32px;
+    }
+
+    .contact-form h2 {
+      font-size: 30px;
+    }
+
+    label {
+      display: block;
+      font: 12px Arial, sans-serif;
+      margin: 18px 0 8px;
+      color: var(--cream);
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 14px;
+      background: #0b0b0b;
+      color: var(--cream);
+      border: 1px solid #393126;
+      font: 13px Arial, sans-serif;
+      outline: none;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      border-color: var(--gold);
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 130px;
+    }
+
+    .button {
+      display: inline-block;
+      width: 100%;
+      border: none;
+      margin-top: 22px;
+      padding: 16px;
+      background: var(--gold);
+      color: var(--black);
+      text-align: center;
+      cursor: pointer;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .button:hover {
+      background: var(--cream);
+    }
+
+    .form-note {
+      color: var(--muted);
+      font: 11px/1.7 Arial, sans-serif;
+      margin-top: 14px;
+    }
+
+    footer {
+      border-top: 1px solid #29251d;
+      padding: 30px 7%;
+      text-align: center;
+      color: var(--muted);
+      font: 11px/1.9 Arial, sans-serif;
+    }
+
+    footer strong {
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 750px) {
+      header {
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      nav {
+        justify-content: center;
+        gap: 14px;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .contact-form {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    BM COLLECTION · THE ART OF TIMELESS ELEGANCE
+  </div>
+
+  <header>
+    <a class="logo" href="index.html">
+      BM
+      <small>BINTE MUSTAFA</small>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Bag</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</div>
+      <h1>Get in <span>Touch.</span></h1>
+      <p>Questions about our collection? Send us a message.</p>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-grid">
+
+        <div>
+          <div class="eyebrow">CUSTOMER CARE</div>
+          <h2>Let's start a <span>conversation.</span></h2>
+
+          <p class="intro">
+            We welcome your questions about our styles,
+            product details, sizing and orders. Use the
+            contact options once your official details
+            have been added below.
+          </p>
+
+          <div class="contact-item">
+            <h3>Brand</h3>
+            <p>BM Collection — Binte Mustafa</p>
+          </div>
+
+          <div class="contact-item">
+            <h3>Email</h3>
+            <p>Add your official business email before launch.</p>
+          </div>
+
+          <div class="contact-item">
+            <h3>WhatsApp</h3>
+            <p>Add your official business WhatsApp number before launch.</p>
+          </div>
+
+          <div class="contact-item">
+            <h3>Customer Support</h3>
+            <p>For product enquiries and order assistance.</p>
+          </div>
+        </div>
+
+        <form class="contact-form" id="contactForm">
+          <div class="eyebrow">SEND A MESSAGE</div>
+          <h2>How can we <span>help?</span></h2>
+
+          <label for="name">Your Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Enter your name"
+            required
+          >
+
+          <label for="email">Email Address</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+            required
+          >
+
+          <label for="subject">Enquiry Type</label>
+          <select id="subject" name="subject" required>
+            <option value="">Select an option</option>
+            <option>Product Information</option>
+            <option>Order Enquiry</option>
+            <option>Size and Fabric</option>
+            <option>Returns and Exchanges</option>
+            <option>Other</option>
+          </select>
+
+          <label for="message">Your Message</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Write your message here..."
+            required
+          ></textarea>
+
+          <button type="submit" class="button">
+            Prepare Email
+          </button>
+
+          <p class="form-note">
+            This demo prepares an email in your email app.
+            It does not send or store messages on a server.
+          </p>
+        </form>
+
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>BM COLLECTION · BINTE MUSTAFA</strong>
+    <p>The Art of Timeless Elegance</p>
+    <p>© 2026 BM Collection. All rights reserved.</p>
+  </footer>
+
+  <script>
+    document.getElementById("contactForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const subject = document.getElementById("subject").value;
+      const message = document.getElementById("message").value.trim();
+
+      // Replace this address with your real business email.
+      const businessEmail = "YOUR-BUSINESS-EMAIL@example.com";
+
+      if (businessEmail === "YOUR-BUSINESS-EMAIL@example.com") {
+        alert("Contact form design is ready. Add your real business email in the code to enable email preparation.");
+        return;
+      }
+
+      const body =
+        "Name: " + name + "\n" +
+        "Customer email: " + email + "\n\n" +
+        "Enquiry: " + subject + "\n\n" +
+        message;
+
+      const mailto =
+        "mailto:" + businessEmail +
+        "?subject=" + encodeURIComponent("BM Collection: " + subject) +
+        "&body=" + encodeURIComponent(body);
+
+      window.location.href = mailto;
+    });
+  </script>
+</body>
+</html>

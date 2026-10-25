@@ -1,0 +1,392 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Checkout at BM Collection by Binte Mustafa.">
+  <title>Checkout | BINTE MUSTAFA</title>
+
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --gold: #c9a45c;
+      --cream: #f7f3eb;
+      --muted: #aaa49a;
+      --line: #302a20;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+      line-height: 1.7;
+    }
+
+    a { color: inherit; text-decoration: none; }
+
+    .announcement {
+      background: var(--gold);
+      color: var(--black);
+      text-align: center;
+      padding: 10px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      padding: 24px 7%;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 27px;
+      letter-spacing: 3px;
+    }
+
+    .logo small {
+      display: block;
+      color: var(--cream);
+      font: 9px Arial, sans-serif;
+      letter-spacing: 4px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover { color: var(--gold); }
+
+    .hero {
+      text-align: center;
+      padding: 55px 7% 40px;
+      background: linear-gradient(180deg, #19150e, var(--black));
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font: 11px Arial, sans-serif;
+      letter-spacing: 4px;
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(38px, 6vw, 58px);
+      font-weight: normal;
+    }
+
+    h1 span, h2 span { color: var(--gold); font-style: italic; }
+
+    .hero p {
+      color: var(--muted);
+      font: 13px Arial, sans-serif;
+      margin-top: 12px;
+    }
+
+    .layout {
+      display: grid;
+      grid-template-columns: 1.3fr 0.8fr;
+      gap: 35px;
+      max-width: 1100px;
+      padding: 25px 7% 80px;
+      margin: auto;
+    }
+
+    .panel {
+      background: #12110e;
+      border: 1px solid var(--line);
+      padding: 30px;
+      align-self: start;
+    }
+
+    h2 {
+      font-size: 27px;
+      font-weight: normal;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 17px 0 7px;
+      font: 12px Arial, sans-serif;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 13px;
+      background: var(--black);
+      color: var(--cream);
+      border: 1px solid #393126;
+      font: 13px Arial, sans-serif;
+    }
+
+    input:focus, textarea:focus, select:focus {
+      outline: 1px solid var(--gold);
+    }
+
+    textarea {
+      min-height: 90px;
+      resize: vertical;
+    }
+
+    .payment-option {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 12px 0;
+      font: 13px Arial, sans-serif;
+    }
+
+    .payment-option input {
+      width: auto;
+      accent-color: var(--gold);
+    }
+
+    .summary-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font: 13px Arial, sans-serif;
+    }
+
+    .summary-row span:first-child { color: var(--muted); }
+
+    .summary-row.total {
+      font-size: 16px;
+      border-bottom: none;
+      padding-top: 20px;
+    }
+
+    .summary-row.total span:last-child { color: var(--gold); }
+
+    .button {
+      width: 100%;
+      display: block;
+      border: none;
+      margin-top: 22px;
+      padding: 16px;
+      background: var(--gold);
+      color: var(--black);
+      cursor: pointer;
+      text-align: center;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .button:hover { background: var(--cream); }
+
+    .note {
+      color: var(--muted);
+      font: 11px/1.8 Arial, sans-serif;
+      margin-top: 16px;
+    }
+
+    .back-link {
+      display: block;
+      margin-top: 20px;
+      text-align: center;
+      color: var(--muted);
+      font: 12px Arial, sans-serif;
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding: 30px 7%;
+      text-align: center;
+      color: var(--muted);
+      font: 11px/1.9 Arial, sans-serif;
+    }
+
+    footer strong { color: var(--gold); letter-spacing: 2px; }
+
+    @media (max-width: 750px) {
+      header { flex-direction: column; }
+      nav { justify-content: center; gap: 14px; }
+      .layout { grid-template-columns: 1fr; }
+      .panel { padding: 22px; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    BM COLLECTION · THE ART OF TIMELESS ELEGANCE
+  </div>
+
+  <header>
+    <a class="logo" href="index.html">
+      BM
+      <small>BINTE MUSTAFA</small>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Bag</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <div class="eyebrow">ALMOST YOURS</div>
+    <h1>Secure <span>Checkout.</span></h1>
+    <p>Enter your delivery details to continue.</p>
+  </section>
+
+  <main class="layout">
+    <form class="panel" id="checkoutForm">
+      <h2>Delivery <span>Details</span></h2>
+
+      <label for="fullName">Full Name *</label>
+      <input id="fullName" name="fullName" required autocomplete="name"
+             placeholder="Your full name">
+
+      <label for="phone">Mobile Number *</label>
+      <input id="phone" name="phone" type="tel" required
+             autocomplete="tel" placeholder="03XX XXXXXXX">
+
+      <label for="email">Email Address (optional)</label>
+      <input id="email" name="email" type="email" autocomplete="email"
+             placeholder="you@example.com">
+
+      <label for="address">Complete Delivery Address *</label>
+      <textarea id="address" name="address" required
+                autocomplete="street-address"
+                placeholder="House number, street and area"></textarea>
+
+      <label for="city">City *</label>
+      <input id="city" name="city" required autocomplete="address-level2"
+             placeholder="Your city">
+
+      <label for="instructions">Delivery Instructions (optional)</label>
+      <textarea id="instructions" name="instructions"
+                placeholder="Any additional instructions"></textarea>
+
+      <h2 style="margin-top:30px">Payment <span>Method</span></h2>
+
+      <label class="payment-option">
+        <input type="radio" name="payment" value="Cash on Delivery" checked>
+        Cash on Delivery (COD)
+      </label>
+
+      <label class="payment-option">
+        <input type="radio" name="payment" value="Bank Transfer">
+        Bank Transfer (arranged separately)
+      </label>
+
+      <button class="button" type="submit">Review Order</button>
+
+      <p class="note">
+        Demo only: this form does not send your details or create a real order.
+        Do not enter real personal information on this local test page.
+      </p>
+    </form>
+
+    <aside class="panel">
+      <div class="eyebrow">YOUR PURCHASE</div>
+      <h2>Order <span>Summary</span></h2>
+
+      <div id="orderItems"></div>
+
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <span id="subtotal">PKR 0</span>
+      </div>
+
+      <div class="summary-row">
+        <span>Delivery</span>
+        <span>Confirmed later</span>
+      </div>
+
+      <div class="summary-row total">
+        <span>Total before delivery</span>
+        <span id="total">PKR 0</span>
+      </div>
+
+      <a class="back-link" href="cart.html">← Return to Shopping Bag</a>
+      <p class="note">
+        Product prices are sample values. Delivery charges and actual
+        payment processing have not been configured.
+      </p>
+    </aside>
+  </main>
+
+  <footer>
+    <strong>BM COLLECTION · BINTE MUSTAFA</strong>
+    <p>The Art of Timeless Elegance</p>
+    <p>© 2026 BM Collection. All rights reserved.</p>
+  </footer>
+
+  <script>
+    const formatPKR = amount =>
+      "PKR " + Number(amount).toLocaleString("en-PK");
+
+    let bag = [];
+
+    try {
+      bag = JSON.parse(localStorage.getItem("bmBag") || "[]");
+      if (!Array.isArray(bag)) bag = [];
+    } catch {
+      bag = [];
+    }
+
+    const orderItems = document.getElementById("orderItems");
+    const subtotal = bag.reduce(
+      (sum, item) => sum + Number(item.price || 0), 0
+    );
+
+    if (bag.length === 0) {
+      orderItems.textContent = "Your shopping bag is empty.";
+    } else {
+      bag.forEach(item => {
+        const row = document.createElement("div");
+        row.className = "summary-row";
+
+        const name = document.createElement("span");
+        name.textContent = item.name || "BM Collection product";
+
+        const price = document.createElement("span");
+        price.textContent = formatPKR(item.price || 0);
+
+        row.append(name, price);
+        orderItems.appendChild(row);
+      });
+    }
+
+    document.getElementById("subtotal").textContent = formatPKR(subtotal);
+    document.getElementById("total").textContent = formatPKR(subtotal);
+
+    document.getElementById("checkoutForm").addEventListener("submit", function(event) {
+      event.preventDefault();
+
+      if (bag.length === 0) {
+        alert("Your shopping bag is empty. Please add a product first.");
+        return;
+      }
+
+      alert(
+        "Demo checkout review complete. No order has been sent or placed. " +
+        "A secure backend is required for real customer orders."
+      );
+    });
+  </script>
+</body>
+</html>

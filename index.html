@@ -1,0 +1,314 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover timeless elegance at BM Collection by Binte Mustafa. Explore luxury fashion and elegant styles.">
+  <title>BM Collection | Binte Mustafa</title>
+
+  <style>
+    :root {
+      --black: #0b0b0b;
+      --gold: #c9a45c;
+      --cream: #f7f3eb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background: var(--black);
+      color: var(--cream);
+      font-family: Georgia, "Times New Roman", serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .announcement {
+      background: var(--gold);
+      color: var(--black);
+      text-align: center;
+      padding: 10px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 24px 7%;
+      border-bottom: 1px solid #29251d;
+    }
+
+    .logo {
+      color: var(--gold);
+      font-size: 27px;
+      letter-spacing: 3px;
+    }
+
+    .logo small {
+      display: block;
+      color: var(--cream);
+      font: 9px Arial, sans-serif;
+      letter-spacing: 4px;
+      text-align: center;
+      margin-top: 5px;
+    }
+
+    nav {
+      display: flex;
+      gap: 24px;
+      font: 11px Arial, sans-serif;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+    }
+
+    nav a:hover {
+      color: var(--gold);
+    }
+
+    .hero {
+      min-height: 570px;
+      padding: 90px 8%;
+      display: flex;
+      align-items: center;
+      background:
+        linear-gradient(90deg, rgba(0,0,0,.94), rgba(0,0,0,.35)),
+        url("https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&w=1800&q=85")
+        center 35% / cover;
+    }
+
+    .hero-content {
+      max-width: 540px;
+    }
+
+    .eyebrow {
+      color: var(--gold);
+      font: 11px Arial, sans-serif;
+      letter-spacing: 4px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 7vw, 76px);
+      font-weight: normal;
+      line-height: 1.08;
+      margin-bottom: 22px;
+    }
+
+    h1 span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
+    .hero p {
+      color: #ded8cc;
+      line-height: 1.8;
+      font: 14px/1.8 Arial, sans-serif;
+      max-width: 390px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 15px 27px;
+      background: var(--gold);
+      color: var(--black);
+      font: 11px Arial, sans-serif;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .section {
+      padding: 75px 7%;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 38px;
+      font-weight: normal;
+      margin-bottom: 12px;
+    }
+
+    .section h2 span {
+      color: var(--gold);
+    }
+
+    .section-intro {
+      color: #aaa49a;
+      font: 13px Arial, sans-serif;
+      margin-bottom: 38px;
+    }
+
+    .collections {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 20px;
+    }
+
+    .collection {
+      min-height: 300px;
+      display: flex;
+      align-items: end;
+      justify-content: center;
+      padding: 25px;
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      isolation: isolate;
+    }
+
+    .collection::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent, rgba(0,0,0,.85));
+      z-index: -1;
+    }
+
+    .collection h3 {
+      font-size: 24px;
+      font-weight: normal;
+    }
+
+    .collection span {
+      display: block;
+      color: var(--gold);
+      font: 10px Arial, sans-serif;
+      letter-spacing: 2px;
+      margin-top: 10px;
+    }
+
+    .one {
+      background-image: url("https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .two {
+      background-image: url("https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&w=700&q=80");
+    }
+
+    .three {
+      background-image: url("https://images.unsplash.com/photo-1585487000160-6ebcfceb0d03?auto=format&fit=crop&w=700&q=80");
+    }
+
+    footer {
+      border-top: 1px solid #29251d;
+      padding: 30px 7%;
+      text-align: center;
+      color: #aaa49a;
+      font: 11px/1.8 Arial, sans-serif;
+    }
+
+    footer strong {
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        flex-direction: column;
+        gap: 22px;
+      }
+
+      nav {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .hero {
+        min-height: 480px;
+        padding: 65px 7%;
+      }
+
+      .collections {
+        grid-template-columns: 1fr;
+      }
+
+      .collection {
+        min-height: 340px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    BM COLLECTION · THE ART OF TIMELESS ELEGANCE
+  </div>
+
+  <header>
+    <a class="logo" href="index.html">
+      BM
+      <small>BINTE MUSTAFA</small>
+    </a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="shop.html">Shop</a>
+      <a href="about.html">Our Story</a>
+      <a href="contact.html">Contact</a>
+      <a href="cart.html">Bag (0)</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-content">
+        <div class="eyebrow">THE NEW COLLECTION</div>
+        <h1>Elegance that<br><span>speaks softly.</span></h1>
+        <p>
+          Discover timeless style, refined details and
+          thoughtfully selected fashion from Binte Mustafa.
+        </p>
+        <a class="button" href="shop.html">Explore Collection →</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="eyebrow">CURATED FOR YOU</div>
+      <h2>Discover Our <span>Collections</span></h2>
+      <p class="section-intro">
+        Distinctive styles. Timeless elegance.
+      </p>
+
+      <div class="collections">
+        <a class="collection one" href="shop.html">
+          <div>
+            <h3>Ready to Wear</h3>
+            <span>EXPLORE COLLECTION →</span>
+          </div>
+        </a>
+
+        <a class="collection two" href="shop.html">
+          <div>
+            <h3>Luxury Pret</h3>
+            <span>EXPLORE COLLECTION →</span>
+          </div>
+        </a>
+
+        <a class="collection three" href="shop.html">
+          <div>
+            <h3>Formal Edit</h3>
+            <span>EXPLORE COLLECTION →</span>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <strong>BM COLLECTION · BINTE MUSTAFA</strong>
+    <p>Luxury Fashion · Timeless Elegance</p>
+    <p>© 2026 BM Collection. All rights reserved.</p>
+  </footer>
+</body>
+</html>
